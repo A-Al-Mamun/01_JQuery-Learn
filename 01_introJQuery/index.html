@@ -9,6 +9,11 @@
         #show{
             border: 1px solid #000;
         }
+        #div1,
+        #div2,
+        #div3{
+            display: none;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -32,6 +37,24 @@
                 $('p').toggle(500);
                 $(".myName").toggle(500);
             });
+
+            $('#fadein').click(function(){
+                $('#div1').fadeIn();
+                $('#div2').fadeIn();
+                $('#div3').fadeIn();
+            });
+
+            $('#fadeout').click(function(){
+                $('#div1').fadeOut();
+                $('#div2').fadeOut();
+                $('#div3').fadeOut();
+            })
+
+            $('#fadetoggle').click(function(){
+                $('#div1').fadeToggle();
+                $('#div2').fadeToggle();
+                $('#div3').fadeToggle();
+            })
         });
     </script>
 </head>
@@ -46,6 +69,13 @@
         <button id="name">Hide Name</button>
         <button id="show">Show</button>
         <button id="toggle">Toggle</button>
+        <button id="fadein">Fade In</button>
+        <button id="fadeout">Fade Out</button>
+        <button id="fadetoggle">Fade Toggle</button>
+        <br><hr><br>
+        <div id="div1" style="width: 200px; height: 100px; background-color: red; margin: 10px auto;"></div>
+        <div id="div2" style="width: 200px; height: 100px; background-color: green; margin: 10px auto;"></div>
+        <div id="div3" style="width: 200px; height: 100px; background-color: rebeccapurple; margin: 10px auto;"></div>
     </div>
     
     
