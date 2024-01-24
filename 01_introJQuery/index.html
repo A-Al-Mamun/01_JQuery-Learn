@@ -5,26 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Practice | JQuery Learn</title>
 
+    <style>
+        #show{
+            border: 1px solid #000;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("button:first").click( function() {
+            $("#all").click( function() {
+                $(".myName").hide();
                 $("p").hide();
             });
-            $("button").click( function() {
-                
-                $(".name").hide();
+            $("#name").click( function() {
+                $(".myName").hide();
+            });
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            $("#show").click(function(){
+                $('p').show();
+                $(".myName").show();
             });
         });
     </script>
 </head>
 <body>
-    <h1>JQuery Learn intro</h1>
-    <p>This is First Practice of JQuery</p>
-    <p>Hello World</p>
-    <div class="name">Abdullah Al Mamun</div>
-    <button>Hide the P selectors</button>
-    <button>Hide Div</button>
+    <div>
+        <h1>JQuery Learn intro</h1>
+        <p>This is First Practice of JQuery</p>
+        <p>Hello World</p>
+        <div class="myName">Abdullah Al Mamun</div>
+        <button id="all">Hide the P selectors</button>
+        <button id="name">Hide Name</button>
+        <button id="show">Show</button>
+    </div>
+    
     
 </body>
 </html>
