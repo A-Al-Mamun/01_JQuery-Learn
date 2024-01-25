@@ -86,15 +86,18 @@
 
             // Accordion Style
             $('.item').click(function (){
-                $('.item-body').slideDown();
+                $('.item-body').slideDown(3000);
                 $('.item1-body').slideUp();
+            })
+            $('#acc-stop').click(function(){
+                $('.item2-body').stop()
             })
             $('.item1').click(function (){
                 $('.item1-body').slideUp();
                 $('.item-body').slideDown();
             })
             $('.item2').click(function (){
-                $('.item2-body').slideToggle();
+                $('.item2-body').slideToggle(3000);
             })
 
             // Animation Style
@@ -132,13 +135,13 @@
         <br><br><hr><br><br>
 
         <h1>Accordion</h1>
-        <div class="item">Heading Title for slide Down</div>
-        <div class="item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus itaque accusantium et minima exercitationem quidem suscipit quasi ducimus, provident magni omnis dolor adipisci quas sed iure assumenda repudiandae quisquam tempore in nihil perferendis quam aliquam! Eos dolores ipsam reiciendis cumque assumenda aliquam nobis vel maxime incidunt quos hic distinctio tempora deserunt recusandae eligendi quibusdam suscipit, placeat repellendus saepe provident? Incidunt id, quasi ipsa, nobis harum neque alias, dolore culpa excepturi vero tempore? Cum vel architecto eveniet cupiditate voluptates necessitatibus commodi, iure officia est nobis odit omnis sequi quod magnam animi, totam provident dolor magni amet mollitia ipsum! Inventore, atque?</div>
+        <div class="item">Heading Title for slide Down </div>
+        <div class="item-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus itaque accusantium et minima exercitationem quidem suscipit quasi ducimus <hr></div>
 
         <div class="item1-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus itaque accusantium et minima exercitationem quidem suscipit quasi ducimus, provident magni omnis dolor adipisci quas sed iure assumenda repudiandae quisquam tempore in nihil perferendis quam aliquam! Eos dolores ipsam reiciendis cumque assumenda aliquam nobis vel maxime incidunt quos hic distinctio tempora deserunt recusandae eligendi quibusdam suscipit, placeat repellendus saepe provident? Incidunt id, quasi ipsa, nobis harum neque alias, dolore culpa excepturi vero tempore? Cum vel architecto eveniet cupiditate voluptates necessitatibus commodi, iure officia est nobis odit omnis sequi quod magnam animi, totam provident dolor magni amet mollitia ipsum! Inventore, atque?</div>
         <div class="item1">Heading Title for slide Up</div>
 
-        <div class="item2">Heading Title</div>
+        <div class="item2">Heading Title <button id="acc-stop">Stop</button></div>
         <div class="item2-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus itaque accusantium et minima exercitationem quidem suscipit quasi ducimus, provident magni omnis dolor adipisci quas sed iure assumenda repudiandae quisquam tempore in nihil perferendis quam aliquam! Eos dolores ipsam reiciendis cumque assumenda aliquam nobis vel maxime incidunt quos hic distinctio tempora deserunt recusandae eligendi quibusdam suscipit, placeat repellendus saepe provident? Incidunt id, quasi ipsa, nobis harum neque alias, dolore culpa excepturi vero tempore? Cum vel architecto eveniet cupiditate voluptates necessitatibus commodi, iure officia est nobis odit omnis sequi quod magnam animi, totam provident dolor magni amet mollitia ipsum! Inventore, atque?</div>
     </div>
     
