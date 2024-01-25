@@ -88,6 +88,7 @@
             $('.item').click(function (){
                 $('.item-body').slideDown(3000);
                 $('.item1-body').slideUp();
+                alert('Item Body Down and then Up')
             })
             $('#acc-stop').click(function(){
                 $('.item2-body').stop()
@@ -97,7 +98,9 @@
                 $('.item-body').slideDown();
             })
             $('.item2').click(function (){
-                $('.item2-body').slideToggle(3000);
+                $('.item2-body').slideToggle('3000', function(){
+                    alert('Continue the slide toggle Function')
+                });
             })
 
             // Animation Style
