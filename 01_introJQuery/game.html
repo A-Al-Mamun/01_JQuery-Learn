@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Practice | JQuery Learn</title>
+
+    <style>
+        body{
+            background: #d341f0;
+        }
+        .background-range{
+            display: flex;
+        }
+        #bg.change::-webkit-slider-runnable-track {
+            width: 300px;
+            height: 5px;
+            background: #000;
+            border: none;
+            border-radius: 3px;
+        }
+        #bg.change::-moz-range-track {
+            width: 300px;
+            height: 5px;
+            background: #000;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).on('input', '#bg', function() {
+                var rangeValue = $(this).val(); 
+                var changeRange = 20;
+                    if(currrentRange > changeRange){
+                        $("#bg").addClass("change");
+                    }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="background-range"><label for="bg">Backgorund</label><input type="range" id="bg"></div>
+</body>
+</html>
