@@ -9,6 +9,15 @@
         #show{
             border: 1px solid #000;
         }
+
+        #me{
+            color: #fff;
+            background: rebeccapurple;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
         #div1,
         #div2,
         #div3{
@@ -112,12 +121,20 @@
                     fontSize: '2rem'
                 }, 'slow')
             })
+
+            // Top Heading me work
+            $('#me').mouseenter(function(){
+                $(this).slideUp(3000);
+            });
+            $('#me').mouseleave(function(){
+                $(this).slideDown(3000);
+            });
         });
     </script>
 </head>
 <body>
     <div>
-        <h1>JQuery Learn intro</h1>
+        <h1>JQuery Learn intro <span id="me">Me</span></h1>
         <p>This is First Practice of JQuery</p>
         <p>Hello World</p>
         <div class="myName">Abdullah Al Mamun</div>
