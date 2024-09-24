@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abdullah Al Mamun">
+    <title>Keyboard Events Practice in JQuery</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .box{
+            margin: 50px;
+            padding: 30px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Keyboard Events in JQuery</h1>
+    <div class="box" id="box1">
+        <h2>Key Press Event</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, accusantium.</p>
+    </div>
+    <div class="box" id="box2">
+        <h2>Key Down Event</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, accusantium.</p>
+    </div>
+    <div class="box" id="box3">
+        <h2>Key Up Event</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, accusantium.</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('body').keypress(function(){
+                $(this).css('background', 'red');
+                $(this).css('color', 'white');
+            });
+            //press and down event almost same but action keyword diffrent
+            // $('body').keydown(function(){
+            //     $(this).css('background', 'purple');
+            //     $(this).css('color', 'red');
+            // });
+            $('body').keyup(function(){
+                $(this).css('background', 'green');
+                $(this).css('color', 'yellow');
+            });
+        });
+    </script>
+</body>
+</html>
