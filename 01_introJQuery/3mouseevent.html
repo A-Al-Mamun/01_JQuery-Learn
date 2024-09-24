@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Mouse Events Practice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #box1{
+            margin: 50px;
+            border: 2px solid #000;
+            padding: 30px;
+            background: purple;
+            color: #ddd;
+        }
+        .box2{
+            margin: 50px;
+            border: 2px solid #000;
+            padding: 30px;
+            background: purple;
+            color: #ddd;
+        }
+        .box3{
+            margin: 50px;
+            border: 2px solid #000;
+            padding: 30px;
+            background: purple;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Mouse Event Practice</h1>
+    <div id="box1">
+        <h2>For Click Mouse Event</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum excepturi rerum in error inventore culpa repudiandae repellat quasi ullam id. Vitae quasi minus quam tempore. Voluptatibus repudiandae beatae excepturi eaque?</p>
+    </div>
+    <div class="box2">
+        <h2>For dblclick  Mouse Event</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum excepturi rerum in error inventore culpa repudiandae repellat quasi ullam id. Vitae quasi minus quam tempore. Voluptatibus repudiandae beatae excepturi eaque?</p>
+    </div>
+    <div class="box2">
+        <h2>For dblclick  Mouse Event</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum excepturi rerum in error inventore culpa repudiandae repellat quasi ullam id. Vitae quasi minus quam tempore. Voluptatibus repudiandae beatae excepturi eaque?</p>
+    </div>
+    <div class="box3">
+        <h2>For dblclick  Mouse Event</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum excepturi rerum in error inventore culpa repudiandae repellat quasi ullam id. Vitae quasi minus quam tempore. Voluptatibus repudiandae beatae excepturi eaque?</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            //Single Click
+            $('#box1').click(function(){
+                $('#box1').css('background', 'tan');
+            });
+
+            //dblclick
+            $('.box2').dblclick(function(){
+                $('.box2').css('background', 'green');
+            });
+
+            $('.box3').contextmenu(function(){
+                $(this).css('background', 'red');
+            });
+
+            $('.box2').mouseenter(function(){
+                $(this).css('background', 'gray');
+            });
+
+            $('.box2').mouseleave(function(){
+                $(this).css('background', 'purple');
+            });
+        });
+    </script>
+</body>
+</html>
